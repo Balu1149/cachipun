@@ -1,3 +1,11 @@
+#Juego de cachipun paradigmas sec 1 profesora María Loreto Arriagada Verdugo
+#Integrantes:
+#Klaus Molt
+#Javier Aguilera
+#Camila Martinez
+#Joaquin Leal
+#Benjamin Lillo
+
 #Se importan las librerias a usar
 from json.tool import main
 import random
@@ -5,7 +13,7 @@ from tkinter.tix import Tree
 import sys
 import time
 
-#1.- Se definen los dibujos de los elementos "Piedra, papel y tijera"
+#1.- Se definen los dibujos de los elementos "Piedra, papel y tijera" (Javier Aguilera)
 def dibujos():
     piedra = """
                 #####@###
@@ -44,7 +52,7 @@ def dibujos():
                 """
     return(piedra, papel, tijera)
 
-#2.- Se define la desición del jugador y la elección aleatoria del enemigo.
+#2.- Se define la desición del jugador y la elección aleatoria del enemigo. (Camila Martinez)
 def decicion():
     while True:
         print('Por favor ingresa la eleccion que quieras hacer:\nPiedra(1), Papel(2), Tijera(3) o Salir(4)')
@@ -62,7 +70,7 @@ def decicion():
     eleccion_enemigo =random.randint(1,3)
     return eleccion, eleccion_enemigo
 
-#3.- Se establecen las relaciones de victoria, derrota y empate.
+#3.- Se establecen las relaciones de victoria, derrota y empate. (Klaus Molt)
 def relaciones(eleccion, e_enemigo):
     if (eleccion ==1 and e_enemigo ==1) or (eleccion ==2 and e_enemigo ==2) or (eleccion ==3 and e_enemigo ==3) :
         #3 es empate
@@ -74,7 +82,7 @@ def relaciones(eleccion, e_enemigo):
         #1 es ganar
         return 1
 
-#Contador de victorias y derrotas
+#Contador de victorias y derrotas (Joaquin Leal)
 def contador(resultado):
     global puntaje_e
     global puntaje_j
@@ -85,7 +93,7 @@ def contador(resultado):
         puntaje_e+= 1
     return
 
-#Se establece el juego, la emisión de los dibujos y la impresión de resultados
+#Se establece el juego, la emisión de los dibujos y la impresión de resultados (Benjamin Lillo)
 def display(d_jugador, d_enemigo, resultado):
     global nombre_jugador
     global puntaje_j
